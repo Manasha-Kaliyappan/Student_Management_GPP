@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Students | Student Management</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Manage Students</h1>
+    <button onclick="goBack()">Back</button>
+  </header>
+
+  <main class="student-section">
+    <h2>Add Student</h2>
+    <form id="studentForm">
+      <input type="text" id="name" placeholder="Student Name" required>
+      <input type="text" id="roll" placeholder="Roll No" required>
+      <input type="text" id="class" placeholder="Class" required>
+      <input type="text" id="grade" placeholder="Grade" required>
+      <button type="submit">Add Student</button>
+    </form>
+
+    <h2>Search & Filter</h2>
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search by name or roll...">
+      <select id="filterClass">
+        <option value="">All Classes</option>
+      </select>
+      <select id="filterAttendance">
+        <option value="">All Attendance</option>
+        <option value="Present">Present</option>
+        <option value="Absent">Absent</option>
+      </select>
+    </div>
+
+    <h2>Attendance Summary</h2>
+    <div id="attendanceSummary"></div>
+
+    <h2>Students List</h2>
+    <button id="downloadCsv">Download as CSV</button>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Roll No</th>
+          <th>Class</th>
+          <th>Grade</th>
+          <th>Attendance</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script src="assets/js/students.js"></script>
+  <script>
+    function goBack() {
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>

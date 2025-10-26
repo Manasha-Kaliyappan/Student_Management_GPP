@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Student Management</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>School Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+  </header>
+
+  <main class="dashboard-container">
+    <div class="card" onclick="navigateTo('students.html')">
+      <h3>Manage Students</h3>
+      <p>Add, edit, and view student records.</p>
+    </div>
+
+    <div class="card" onclick="navigateTo('attendance.html')">
+      <h3>Attendance</h3>
+      <p>Mark and view attendance reports.</p>
+    </div>
+  </main>
+
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>
